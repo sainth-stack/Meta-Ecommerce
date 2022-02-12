@@ -13,9 +13,6 @@ app.use(bodyParser.json())
 app.use('/api/products',productsRoute)
 app.use('/api/user',userRoutes)
 app.use('/api/orders',orderRoute)
-app.get('/',(req,res)=>{
-    res.send('this from backend')
-});
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('client/build'))
     app.get('*',(req,res)=>{
