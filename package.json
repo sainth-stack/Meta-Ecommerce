@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "node":"14.17.5",
+  "node": "14.17.5",
   "dependencies": {
     "axios": "^0.24.0",
     "body-parser": "^1.19.1",
+    "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",
@@ -18,14 +19,13 @@
     "stripe": "^8.201.0",
     "uuid": "^8.3.2"
   },
-  "devDependencies": {},
   "scripts": {
-"client-install":"npm install --prefix client",
-"server":"nodemon index.js",
-"client":"npm start --prefix client",
-"dev":"concurrently \"npm run server\" \"npm run client\"",
-"start":"node server.js",
-"heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prfix client"
+    "client-install": "npm install --prefix client",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prfix client"
   },
   "keywords": [],
   "author": "",
